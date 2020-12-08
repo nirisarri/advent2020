@@ -1,9 +1,3 @@
-def load(file):
-    f = open(file)
-    data = f.readlines()
-    f.close()
-    return data
-
 
 def count_trees(data, initial_position, move_right, move_down):
     position = initial_position
