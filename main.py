@@ -59,10 +59,22 @@ def print_day4():
     print(valid_passports)
 
 
+def print_day5():
+    from Day5.plane import Plane
+    data = load("Day5/input.txt")
+    plane = Plane()
+    plane.populate(data)
+    print("Highest ID: {}".format(plane.highest_id))
+    for seat in plane.available_seats:
+        if seat - 1 not in plane.available_seats and seat + 1 not in plane.available_seats:
+            print("Available seat: {}".format(seat))
+
+
 if __name__ == '__main__':
     # print_day1()
     # print_day2()
     # print_day3()
-    print_day4()
+    # print_day4()
+    print_day5()
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
